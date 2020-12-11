@@ -1,0 +1,27 @@
+#!/usr/bin/env python
+
+""" This is a dummy implementation of the intents:
+    {% for intent in context.intents -%}
+        "{{ intent.name }}"
+    {% endfor %}
+"""
+
+from skill_sdk import skill, Response, ask, tell
+from skill_sdk.l10n import _
+
+{% for intent in context.intents %}
+@skill.intent_handler("{{ intent.name }}")
+def {{ intent.handler_name }}({{ intent.entities|join(', ', attribute='as_parameter') }}) -> Response:
+    """ {{ intent.name }} handler
+        {% for entity in intent.entities %}
+    :param {{ entity.as_parameter }}
+        {%- endfor %}
+    :return:
+    """
+    response = Response(_("HELLO", intent="{{ intent.name }}"))
+    return response
+
+{% endfor %}
+if __name__ == '__main__':  # pragma: no cover
+    skill.run()
+

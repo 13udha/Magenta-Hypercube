@@ -1,0 +1,8 @@
+include LICENSE requirements.txt README.md
+include skill_sdk/swagger.yml
+recursive-include swagger_ui/node_modules *
+recursive-include skill_generator/skill_template *
+recursive-include skill_generator/templates *
+recursive-include docs *
+
+global-exclude *.py[cod] __pycache__

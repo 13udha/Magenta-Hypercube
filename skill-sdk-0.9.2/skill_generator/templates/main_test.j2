@@ -1,0 +1,39 @@
+import unittest
+from skill_sdk.responses import RESPONSE_TYPE_TELL
+from skill_sdk.test_helpers import FunctionalTest
+from impl.main import skill
+
+
+class TestMain(unittest.TestCase):
+{% for intent in context.intents%}
+    def test_{{ intent.handler_name }}(self):
+        """ Test {{ intent.handler_name }}
+        """
+        response = skill.test_intent("{{ intent.name }}")
+        self.assertEqual(response.text.key, "HELLO")
+        self.assertEqual(response.text.kwargs, {'intent': 'WEATHER__STATUS'})
+
+{% endfor %}
+class TestRunner(FunctionalTest):
+    """
+        Full functional test sample:
+
+            This test starts the web server in a separate greenlet (see test_helpers.FunctionalTest.setUpClass)
+                and tests two endpoints:
+                - GET /v1/{{skill_name}}/info
+                - POST /v1/{{skill_name}}
+
+    """
+
+    def test_info_response(self):
+        """ Test /v1/{{skill_name}}/info endpoint
+        """
+        return self.default_info_response_test()
+{% for intent in context.intents%}
+    def test_{{ intent.handler_name }}(self):
+        """ Test {{ intent.handler_name }} with locale="de"
+        """
+        response = self.invoke("{{ intent.name }}", locale="de")
+        self.assertEqual(response["type"], RESPONSE_TYPE_TELL)
+        self.assertEqual(response["text"], f"Hallo {{ intent.name }}")
+{% endfor %}
