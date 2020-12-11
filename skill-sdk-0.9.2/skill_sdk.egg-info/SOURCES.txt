@@ -1,6 +1,7 @@
 LICENSE
 MANIFEST.in
 README.md
+pyproject.toml
 requirements.txt
 setup.cfg
 setup.py
@@ -57,13 +58,6 @@ skill_generator/skill_template/skill-{{cookiecutter.skill_name_slug}}-{{cookiecu
 skill_generator/skill_template/skill-{{cookiecutter.skill_name_slug}}-{{cookiecutter.programming_language}}/manage.py
 skill_generator/skill_template/skill-{{cookiecutter.skill_name_slug}}-{{cookiecutter.programming_language}}/requirements.txt
 skill_generator/skill_template/skill-{{cookiecutter.skill_name_slug}}-{{cookiecutter.programming_language}}/skill.conf
-skill_generator/skill_template/skill-{{cookiecutter.skill_name_slug}}-{{cookiecutter.programming_language}}/.idea/skill-{{cookiecutter.skill_name_slug}}-{{cookiecutter.programming_language}}.iml
-skill_generator/skill_template/skill-{{cookiecutter.skill_name_slug}}-{{cookiecutter.programming_language}}/.idea/workspace.xml
-skill_generator/skill_template/skill-{{cookiecutter.skill_name_slug}}-{{cookiecutter.programming_language}}/.idea/runConfigurations/Unittests_in_tests.xml
-skill_generator/skill_template/skill-{{cookiecutter.skill_name_slug}}-{{cookiecutter.programming_language}}/.idea/runConfigurations/manage___help.xml
-skill_generator/skill_template/skill-{{cookiecutter.skill_name_slug}}-{{cookiecutter.programming_language}}/.idea/runConfigurations/manage_run.xml
-skill_generator/skill_template/skill-{{cookiecutter.skill_name_slug}}-{{cookiecutter.programming_language}}/.idea/runConfigurations/manage_test.xml
-skill_generator/skill_template/skill-{{cookiecutter.skill_name_slug}}-{{cookiecutter.programming_language}}/.idea/runConfigurations/manage_version.xml
 skill_generator/skill_template/skill-{{cookiecutter.skill_name_slug}}-{{cookiecutter.programming_language}}/impl/hello.py
 skill_generator/skill_template/skill-{{cookiecutter.skill_name_slug}}-{{cookiecutter.programming_language}}/impl/joke.py
 skill_generator/skill_template/skill-{{cookiecutter.skill_name_slug}}-{{cookiecutter.programming_language}}/impl/number.py
@@ -106,6 +100,7 @@ skill_sdk/tracing.py
 skill_sdk.egg-info/PKG-INFO
 skill_sdk.egg-info/SOURCES.txt
 skill_sdk.egg-info/dependency_links.txt
+skill_sdk.egg-info/entry_points.txt
 skill_sdk.egg-info/requires.txt
 skill_sdk.egg-info/top_level.txt
 skill_sdk/caching/__init__.py
