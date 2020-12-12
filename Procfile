@@ -1,1 +1,1 @@
-bot: sh -c 'cd ./gitgud/skill-gitgud-python/ && python manage.py --dev run'
+web: sh -c 'cd ./gitgud/skill-gitgud-python/ && python manage.py --dev run'
