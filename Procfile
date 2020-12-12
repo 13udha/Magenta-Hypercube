@@ -1,1 +1,1 @@
-web: python manage.py --dev run
+web: python gitgud/skill-gitgud-python/manage.py --dev run
