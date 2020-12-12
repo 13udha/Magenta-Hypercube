@@ -31,3 +31,16 @@ msgstr "Es tut mir leid, das war nicht meine Nummer. Vielleicht nächstes Mal?"
 
 msgid "HELLOAPP_NO_NUMBER_MESSAGE"
 msgstr "Ich hatte Probleme dich zu verstehen. Bitte rate eine Nummer von 1 bis 10."
+
+msgid = "GITGUD_STATS_AFFIRMATION"
+msgstr = "Hier sind deine GitHub stats. {stats}"
+
+msgid = "GITGUD_STATS_ERROR"
+msgstr = "Ich konnte die Statistik von dem Repository {repo} nicht auslesen. Folgender Fehler ist aufgetreten:{err}"
+
+msgid = "GITGUD_COMMIT_AFFIRMATION"
+msgstr = "Hier ist {commit_type} commit Nachricht. {commit_message}"
+
+msgid = "GITGUD_COMMIT_ERROR"
+msgstr = "Ich konnte die {commit_type} commit von dem Repository {repo} nicht auslesen. Folgender Fehler ist aufgetreten: {err}"
+
