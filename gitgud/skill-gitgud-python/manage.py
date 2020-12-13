@@ -12,6 +12,8 @@ if 'PORT' in os.environ:
     config['http']['port'] = os.environ['PORT']
     with open(conf_file, 'w') as configfile:
         config.write(configfile)
+    print(config['http']['port'])    
+print(config['http']['port'])     
 
 
 manage()
