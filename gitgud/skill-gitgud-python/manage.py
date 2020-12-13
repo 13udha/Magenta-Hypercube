@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 from skill_sdk.manage import manage
+import os
+import configparser
+
 
 conf_file = 'skill.conf'
 
